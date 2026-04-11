@@ -33,6 +33,12 @@ class VoiceNarrator {
     this.synth = window.speechSynthesis;
     this._resolveSpeak = null;
 
+    // Preload voices (Chrome loads them async)
+    this.synth.getVoices();
+    if (this.synth.onvoiceschanged !== undefined) {
+      this.synth.onvoiceschanged = () => this.synth.getVoices();
+    }
+
     // Character voice settings (pitch, rate) for differentiation
     this.characterVoices = {
       _narrator:              { pitch: 1.0,  rate: 0.95 },  // neutral — verteller
@@ -91,11 +97,28 @@ class VoiceNarrator {
     return new Promise((resolve) => {
       this._highlightElement(segment.element);
 
-      const voice = this.characterVoices[segment.speaker] || this.characterVoices._narrator;
+      const voiceSettings = this.characterVoices[segment.speaker] || this.characterVoices._narrator;
       const utterance = new SpeechSynthesisUtterance(segment.text);
-      utterance.lang = gameState.lang === 'nl' ? 'nl-NL' : 'en-GB';
-      utterance.pitch = voice.pitch;
-      utterance.rate = voice.rate;
+      const langCode = gameState.lang === 'nl' ? 'nl' : 'en';
+      utterance.lang = langCode === 'nl' ? 'nl-NL' : 'en-US';
+
+      // Pick a voice per character — cycle through available voices for variety
+      const voices = this.synth.getVoices().filter(v => v.lang.startsWith(langCode));
+      if (voices.length > 0) {
+        // Assign a consistent voice index per speaker name
+        const speakerKey = segment.speaker || '_narrator';
+        let hash = 0;
+        for (let i = 0; i < speakerKey.length; i++) {
+          hash = ((hash << 5) - hash) + speakerKey.charCodeAt(i);
+          hash |= 0;
+        }
+        const idx = Math.abs(hash) % voices.length;
+        utterance.voice = voices[idx];
+        utterance.lang = voices[idx].lang;
+      }
+
+      utterance.pitch = voiceSettings.pitch;
+      utterance.rate = voiceSettings.rate;
 
       this.currentUtterance = utterance;
       this._resolveSpeak = resolve;

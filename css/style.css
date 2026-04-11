@@ -304,8 +304,7 @@ body {
 .narration-highlight {
   background: rgba(255, 221, 0, 0.08);
   border-radius: 4px;
-  box-shadow: inset 3px 0 0 var(--wmc-geel);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 /* AUDIO NARRATION BAR */
