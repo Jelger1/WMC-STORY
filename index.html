@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="nl" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klankstad — WMC Kerkrade 1951</title>
+  <meta name="description" content="Een interactief verhaal over het eerste Wereld Muziek Concours in Kerkrade, 1951. Gebaseerd op de WMC 2026 styleguide.">
+  <link rel="icon" type="image/svg+xml" href="WMC-FAVICO.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- Viva la Vida floating shapes canvas -->
+  <canvas id="viva-canvas"></canvas>
+
+  <!-- WMC Circle background (from 2022 style, 10% opacity) -->
+  <div class="wmc-circle-bg"></div>
+
+  <!-- Progress Bar (WMC color gradient) -->
+  <div id="progress-bar"></div>
+
+  <!-- Chapter Indicator -->
+  <div id="chapter-indicator"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Decorative blob SVGs on sides -->
+  <div id="blob-decorations" aria-hidden="true"></div>
+
+  <!-- Language Selection Screen -->
+  <div id="language-screen">
+    <div class="lang-inner">
+      <img src="WMC-LOGO.svg" alt="Wereld Muziek Concours" class="wmc-logo-img">
+      <h2 class="lang-title" id="lang-title">Kies je taal / Choose your language</h2>
+      <div class="lang-buttons">
+        <button class="lang-btn" data-lang="nl">
+          <span class="lang-btn-label">Nederlands</span>
+          <span class="lang-btn-sub">Nederlandse versie</span>
+        </button>
+        <button class="lang-btn" data-lang="en">
+          <span class="lang-btn-label">English</span>
+          <span class="lang-btn-sub">English version</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Game Container -->
+  <div id="game-container">
+
+    <!-- Title Screen -->
+    <div id="title-screen">
+      <!-- Viva la Vida decorative shapes -->
+      <div class="viva-shape viva-shape-1"></div>
+      <div class="viva-shape viva-shape-2"></div>
+      <div class="viva-shape viva-shape-3"></div>
+      <div class="viva-shape viva-shape-4"></div>
+      <div class="viva-shape viva-shape-5"></div>
+      <div class="viva-shape viva-shape-6"></div>
+      <div class="viva-shape viva-shape-7"></div>
+
+      <img src="WMC-LOGO.svg" alt="Wereld Muziek Concours" class="wmc-logo-img">
+      <h1>Klankstad</h1>
+      <div class="subtitle" id="subtitle">Een interactief verhaal</div>
+      <div class="year">1951</div>
+
+      <div class="intro-text" id="intro-text"></div>
+
+      <div class="tagline" id="tagline"></div>
+
+      <div class="how-section" id="how-section">
+        <h3 class="how-title" id="how-title"></h3>
+        <ol class="how-steps" id="how-steps"></ol>
+      </div>
+
+      <button class="start-btn" id="start-btn"></button>
+    </div>
+
+    <!-- Story Scene (dynamically filled by JS) -->
+    <div id="story-scene"></div>
+
+  </div>
+
+  <script src="js/content.js"></script>
+  <script src="js/story.js"></script>
+</body>
+</html>
