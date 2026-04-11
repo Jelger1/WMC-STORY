@@ -300,6 +300,60 @@ body {
 .narrative-text .dialogue:nth-of-type(3n) { border-left-color: var(--wmc-groen); }
 .narrative-text .dialogue:nth-of-type(3n) .speaker { color: var(--wmc-groen); }
 
+/* NARRATION HIGHLIGHT — currently spoken element */
+.narration-highlight {
+  background: rgba(255, 221, 0, 0.08);
+  border-radius: 4px;
+  box-shadow: inset 3px 0 0 var(--wmc-geel);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* AUDIO NARRATION BAR */
+/* AUDIO FAB — small play/pause button, bottom-left */
+.audio-fab {
+  position: fixed;
+  bottom: -60px;
+  left: 1.5rem;
+  z-index: 400;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(17, 17, 17, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s ease,
+              color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  pointer-events: none;
+}
+.audio-fab.visible {
+  bottom: 1.5rem;
+  pointer-events: auto;
+}
+.audio-fab:hover {
+  border-color: var(--scene-accent);
+  color: var(--scene-accent);
+}
+.audio-fab.active {
+  border-color: rgba(255, 221, 0, 0.4);
+  color: var(--wmc-geel);
+  background: rgba(17, 17, 17, 0.85);
+  box-shadow: 0 0 12px rgba(255, 221, 0, 0.15);
+}
+.audio-fab-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+  margin-left: 2px; /* optical centering for ▶ */
+}
+.audio-fab.active .audio-fab-icon {
+  margin-left: 0;
+}
+
 /* BLOB DECORATIONS — side decorations */
 #blob-decorations {
   position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -447,29 +501,88 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  html { font-size: 16px; }
-  #game-container { padding: 0 1rem; }
-  #title-screen h1 { font-size: 2.2rem; }
-  #title-screen .year { font-size: 3rem; }
-  .chapter-title { font-size: 1.4rem; }
-  .choice-btn { padding: 1rem 1.2rem; }
+  html { font-size: 17px; }
+  #game-container { padding: 1.5rem 1.25rem; }
+  #title-screen h1 { font-size: 2.8rem; }
+  #title-screen .year { font-size: 3.5rem; margin-bottom: 2rem; }
+  #title-screen .tagline { font-size: 0.95rem; }
+  .chapter-splash { min-height: 30vh; }
+  .chapter-splash .chapter-title { font-size: 2rem; }
+  .narrative-text { font-size: 1.05rem; line-height: 1.85; }
+  .narrative-text .dialogue { padding: 0.85rem 1rem; margin: 1.2rem 0; }
+  .narrative-text .speaker { font-size: 0.75rem; }
+  .choice-btn { padding: 1.2rem 1.4rem; }
+  .choice-btn .choice-label { font-size: 0.95rem; }
+  .choice-btn .choice-desc { font-size: 0.85rem; }
+  .continue-btn { padding: 0.85rem 2rem; font-size: 0.9rem; }
   .wmc-circle-bg { width: 400px; height: 400px; }
   .wmc-logo-img { width: 180px; }
   .lang-btn { width: 170px; padding: 1.5rem 1rem; }
   .how-section { padding: 1.2rem 1.5rem; }
+  .how-steps li { font-size: 0.85rem; }
+  .intro-text { font-size: 0.95rem; }
   .blob-decor { width: 80px; opacity: 0.08; }
+  .audio-fab { width: 36px; height: 36px; }
+  .audio-fab-icon { font-size: 0.8rem; }
 }
 @media (max-width: 480px) {
-  html { font-size: 15px; }
-  #title-screen h1 { font-size: 1.8rem; }
-  #title-screen .year { font-size: 2.5rem; }
+  html { font-size: 16px; }
+  #game-container { padding: 1.25rem 1rem; max-width: 100%; }
+  #title-screen h1 { font-size: 2.2rem; letter-spacing: 0.06em; }
+  #title-screen .year { font-size: 2.8rem; margin-bottom: 1.5rem; }
+  #title-screen .subtitle { font-size: 0.85rem; }
+  #title-screen .tagline { font-size: 0.9rem; line-height: 1.75; margin-bottom: 1.5rem; }
+  .chapter-splash { min-height: 25vh; margin-bottom: 1.5rem; }
+  .chapter-splash .chapter-number { font-size: 0.75rem; }
+  .chapter-splash .chapter-title { font-size: 1.6rem; }
+  .narrative-text { font-size: 1rem; line-height: 1.8; }
+  .narrative-text .dialogue { padding: 0.75rem 0.85rem; margin: 1rem 0; line-height: 1.65; font-size: 0.95rem; }
+  .narrative-text .speaker { font-size: 0.7rem; letter-spacing: 0.12em; }
+  .tap-continue { padding: 0.6rem 1.5rem; font-size: 0.72rem; margin: 1.5rem auto; }
+  .choice-btn { padding: 1rem 1.1rem; font-size: 0.95rem; }
+  .choice-btn .choice-label { font-size: 0.9rem; }
+  .choice-btn .choice-desc { font-size: 0.82rem; }
+  .continue-btn { padding: 0.75rem 1.8rem; font-size: 0.85rem; }
+  .choices-prompt { font-size: 0.75rem; }
+  .scene-location { font-size: 0.68rem; margin-bottom: 1.5rem; }
+  .ending-screen .ending-title { font-size: 1.6rem; }
+  .ending-screen .ending-text { font-size: 0.95rem; }
   .viva-shape { display: none; }
   .wmc-circle-bg { width: 300px; height: 300px; }
   .wmc-logo-img { width: 150px; }
   .lang-buttons { flex-direction: column; gap: 1rem; }
   .lang-btn { width: 220px; }
+  .lang-title { font-size: 0.95rem; }
   .how-section { padding: 1rem 1.2rem; }
+  .how-steps li { font-size: 0.82rem; padding-left: 1.6rem; }
+  .intro-text { font-size: 0.9rem; }
   .blob-decor { width: 60px; opacity: 0.06; }
+  .audio-fab { width: 34px; height: 34px; left: 1rem; bottom: 1rem; }
+  .audio-fab.visible { bottom: 1rem; }
+  .audio-fab-icon { font-size: 0.75rem; }
+  .start-btn { font-size: 0.9rem; padding: 0.8rem 2rem; }
+  .restart-btn { font-size: 0.9rem; padding: 0.7rem 1.5rem; }
+}
+@media (max-width: 375px) {
+  html { font-size: 15px; }
+  #game-container { padding: 1rem 0.75rem; }
+  #title-screen h1 { font-size: 1.9rem; }
+  #title-screen .year { font-size: 2.4rem; }
+  #title-screen .tagline { font-size: 0.85rem; }
+  .chapter-splash .chapter-title { font-size: 1.4rem; }
+  .narrative-text { font-size: 0.95rem; line-height: 1.75; }
+  .narrative-text .dialogue { padding: 0.65rem 0.75rem; font-size: 0.9rem; }
+  .choice-btn { padding: 0.85rem 1rem; }
+  .choice-btn .choice-label { font-size: 0.85rem; }
+  .choice-btn .choice-desc { font-size: 0.78rem; }
+  .wmc-logo-img { width: 130px; }
+  .how-section { padding: 0.85rem 1rem; }
+  .how-steps li { font-size: 0.78rem; }
+  .intro-text { font-size: 0.85rem; }
+  .lang-btn { width: 200px; padding: 1.2rem 0.8rem; }
+  .lang-btn-label { font-size: 1.05rem; }
+  .audio-fab { width: 32px; height: 32px; }
+  .audio-fab-icon { font-size: 0.7rem; }
 }
 
 ::-webkit-scrollbar { width: 6px; }

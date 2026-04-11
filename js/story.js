@@ -1,5 +1,5 @@
-/* ============================================
-   WMC Kerkrade 1951 � Story Engine
+﻿/* ============================================
+   WMC Kerkrade 1951 � Story Engine
    Interactive Digital Narrative
 
    Hidden meters: Stadstrots & Openheid
@@ -23,6 +23,180 @@ function getEndings() { return getLang().endings; }
 function getSceneLocations() { return getLang().sceneLocations; }
 function getUI() { return getLang().ui; }
 
+// --- Web Speech API Voice Narration System -----------
+class VoiceNarrator {
+  constructor() {
+    this.isPlaying = false;
+    this.isPaused = false;
+    this.currentUtterance = null;
+    this.currentHighlight = null;
+    this.synth = window.speechSynthesis;
+    this._resolveSpeak = null;
+
+    // Character voice settings (pitch, rate) for differentiation
+    this.characterVoices = {
+      _narrator:              { pitch: 1.0,  rate: 0.95 },  // neutral — verteller
+      'Zef':                  { pitch: 0.8,  rate: 1.0  },  // low, steady — mijnwerker
+      'Jan Meijs':            { pitch: 0.9,  rate: 0.9  },  // authoritative — comitévoorzitter
+      'Pie Slijpen':          { pitch: 1.1,  rate: 1.05 },  // lighter, expressive — comitélid
+      'Mevr. Cremers':        { pitch: 1.3,  rate: 0.95 },  // warm female — hostelcoördinator
+      'Mrs Cremers':          { pitch: 1.3,  rate: 0.95 },
+      'Müller':               { pitch: 0.7,  rate: 0.85 },  // deep, older — oude mijnwerker
+      'Mueller':              { pitch: 0.7,  rate: 0.85 },
+      'Tom Atkinson':         { pitch: 1.05, rate: 1.0  },  // British flair — Engelse bandleider
+      'Atkinson':             { pitch: 1.05, rate: 1.0  },
+      'Bandleider':           { pitch: 0.85, rate: 0.9  },  // commanding — Duitse orkestleider
+      'Bandleader':           { pitch: 0.85, rate: 0.9  },
+      'Trombonist':           { pitch: 1.0,  rate: 1.05 },  // youthful — Belgische muzikant
+      'Belgische trombonist': { pitch: 1.0,  rate: 1.05 },
+      'Klarinettist':         { pitch: 1.15, rate: 0.95 },  // clear — Duitse muzikant
+      'Clarinettist':         { pitch: 1.15, rate: 0.95 },
+      'Iemand achteraan':     { pitch: 0.95, rate: 1.1  },  // distinct — anoniem café
+      'Someone in the back':  { pitch: 0.95, rate: 1.1  }
+    };
+  }
+
+  // --- Parse beat into segments ---
+  parseBeatSegments(beatDiv) {
+    const segments = [];
+    const paragraphs = beatDiv.querySelectorAll('p');
+    paragraphs.forEach(p => {
+      const dialogue = p.querySelector('.dialogue');
+      if (dialogue) {
+        const speakerEl = dialogue.querySelector('.speaker');
+        const speaker = speakerEl ? speakerEl.textContent.trim() : '_narrator';
+        const text = dialogue.textContent.replace(speakerEl ? speakerEl.textContent : '', '').trim();
+        const cleanText = text.replace(/^[""\u201C]+|[""\u201D]+$/g, '').trim();
+        if (cleanText) {
+          segments.push({ speaker, text: cleanText, element: p });
+        }
+      } else {
+        const text = p.textContent.trim();
+        if (text) {
+          segments.push({ speaker: '_narrator', text, element: p });
+        }
+      }
+    });
+    if (segments.length === 0) {
+      const text = beatDiv.textContent.trim();
+      if (text) {
+        segments.push({ speaker: '_narrator', text, element: beatDiv });
+      }
+    }
+    return segments;
+  }
+
+  // --- Speak a single segment via Web Speech API ---
+  _speakSegment(segment) {
+    return new Promise((resolve) => {
+      this._highlightElement(segment.element);
+
+      const voice = this.characterVoices[segment.speaker] || this.characterVoices._narrator;
+      const utterance = new SpeechSynthesisUtterance(segment.text);
+      utterance.lang = gameState.lang === 'nl' ? 'nl-NL' : 'en-GB';
+      utterance.pitch = voice.pitch;
+      utterance.rate = voice.rate;
+
+      this.currentUtterance = utterance;
+      this._resolveSpeak = resolve;
+
+      utterance.onend = () => {
+        this._removeHighlight();
+        this.currentUtterance = null;
+        this._resolveSpeak = null;
+        resolve();
+      };
+      utterance.onerror = (e) => {
+        if (e.error === 'canceled' || e.error === 'interrupted') {
+          // intentional stop/cancel
+        } else {
+          console.warn('Speech error:', e.error);
+        }
+        this._removeHighlight();
+        this.currentUtterance = null;
+        this._resolveSpeak = null;
+        resolve();
+      };
+
+      this.synth.speak(utterance);
+    });
+  }
+
+  _highlightElement(el) {
+    this._removeHighlight();
+    if (el) {
+      el.classList.add('narration-highlight');
+      this.currentHighlight = el;
+      const rect = el.getBoundingClientRect();
+      if (rect.top > window.innerHeight * 0.7 || rect.bottom < 0) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  }
+
+  _removeHighlight() {
+    if (this.currentHighlight) {
+      this.currentHighlight.classList.remove('narration-highlight');
+      this.currentHighlight = null;
+    }
+  }
+
+  // --- Narrate an entire beat ---
+  async narrateBeat(beatDiv, onComplete) {
+    const segments = this.parseBeatSegments(beatDiv);
+    for (let i = 0; i < segments.length; i++) {
+      if (!this.isPlaying) return;
+      while (this.isPaused) {
+        await new Promise(r => setTimeout(r, 100));
+        if (!this.isPlaying) return;
+      }
+      await this._speakSegment(segments[i]);
+    }
+    if (onComplete) onComplete();
+  }
+
+  play() {
+    if (this.isPaused) {
+      this.isPaused = false;
+      this.synth.resume();
+      this.isPlaying = true;
+      return;
+    }
+    this.isPlaying = true;
+    this.isPaused = false;
+  }
+
+  pause() {
+    this.isPaused = true;
+    this.synth.pause();
+  }
+
+  stop() {
+    this.isPlaying = false;
+    this.isPaused = false;
+    this.synth.cancel();
+    this.currentUtterance = null;
+    this._removeHighlight();
+  }
+
+  toggle() {
+    if (!this.isPlaying) {
+      this.play();
+      return 'playing';
+    } else if (this.isPaused) {
+      this.play();
+      return 'playing';
+    } else {
+      this.pause();
+      return 'paused';
+    }
+  }
+
+  clearCache() {
+    // No cache to clear with Web Speech API
+  }
+}
+
 // --- Story Engine ----------------------------------
 class StoryEngine {
   constructor() {
@@ -41,6 +215,8 @@ class StoryEngine {
     this.currentBeatIndex = 0;
     this.activeScene = null;
     this.narrativeContainer = null;
+    this.narrator = new VoiceNarrator();
+    this.listenMode = false;
     this.blobSvgs = [
       'Trompet-Blob-WMC-STYLE.svg',
       'Trombone-Blob-WMC-STYLE.svg',
@@ -56,6 +232,63 @@ class StoryEngine {
     });
     document.getElementById('start-btn').addEventListener('click', () => {
       this.startGame();
+    });
+    this._initAudioControls();
+  }
+
+  _initAudioControls() {
+    this.audioBar = document.getElementById('audio-bar');
+    this.audioFabIcon = document.getElementById('audio-fab-icon');
+
+    if (!this.audioBar) return;
+
+    this.audioBar.addEventListener('click', () => {
+      if (!this.listenMode) {
+        this.listenMode = true;
+        this.narrator.play();
+        this._updateAudioUI('playing');
+        this._narrateCurrentBeat();
+      } else {
+        const state = this.narrator.toggle();
+        this._updateAudioUI(state);
+      }
+    });
+  }
+
+  _updateAudioUI(state) {
+    const playIcon = '\u25B6';   // ▶
+    const pauseIcon = '\u23F8';  // ⏸
+
+    if (state === 'playing') {
+      this.audioBar.classList.add('active');
+      this.audioFabIcon.textContent = pauseIcon;
+    } else if (state === 'paused') {
+      this.audioFabIcon.textContent = playIcon;
+    } else {
+      this.audioBar.classList.remove('active');
+      this.audioFabIcon.textContent = playIcon;
+    }
+  }
+
+  _narrateCurrentBeat() {
+    if (!this.listenMode || !this.narrator.isPlaying) return;
+
+    const beatDivs = this.narrativeContainer.querySelectorAll('.beat');
+    const currentBeatDiv = beatDivs[beatDivs.length - 1];
+    if (!currentBeatDiv) return;
+
+    this.narrator.narrateBeat(currentBeatDiv, () => {
+      if (!this.listenMode) return;
+      if (this.currentBeatIndex < this.currentBeats.length) {
+        const oldTap = this.narrativeContainer.querySelector('.tap-continue');
+        if (oldTap) oldTap.remove();
+        this.showNextBeat();
+        setTimeout(() => this._narrateCurrentBeat(), 600);
+      } else {
+        this.listenMode = false;
+        this.narrator.stop();
+        this._updateAudioUI('stopped');
+      }
     });
   }
 
@@ -90,9 +323,15 @@ class StoryEngine {
     gameState.flags = {};
     this.scenesVisited = 0;
 
+    // Stop any ongoing narration
+    this.listenMode = false;
+    this.narrator.stop();
+    this._updateAudioUI('stopped');
+
     this.titleScreen.style.display = 'none';
     this.storyScene.classList.add('active');
     this.chapterIndicator.classList.add('visible');
+    this.audioBar.classList.add('visible');
 
     this.loadScene('proloog');
   }
@@ -154,6 +393,13 @@ class StoryEngine {
     const scenes = getScenes();
     const scene = scenes[sceneId];
     if (!scene) return;
+
+    // Stop any ongoing narration when changing scenes
+    this.narrator.stop();
+    if (this.listenMode) this._updateAudioUI('stopped');
+    const wasListening = this.listenMode;
+    this.listenMode = false;
+
     gameState.currentScene = sceneId;
     gameState.history.push(sceneId);
     this.scenesVisited++;
@@ -208,6 +454,16 @@ class StoryEngine {
 
       // Update blob decorations on the sides
       this.updateBlobDecorations();
+
+      // Auto-resume narration if user was in listen mode
+      if (wasListening) {
+        setTimeout(() => {
+          this.listenMode = true;
+          this.narrator.play();
+          this._updateAudioUI('playing');
+          this._narrateCurrentBeat();
+        }, 800);
+      }
 
       // Fade in
       this.storyScene.style.opacity = '1';
@@ -287,7 +543,7 @@ class StoryEngine {
       });
 
       this.storyScene.appendChild(choicesContainer);
-      // NO auto-scroll � user reads context above, then scrolls down to choices naturally
+      // NO auto-scroll � user reads context above, then scrolls down to choices naturally
 
     } else if (scene.continueText && scene.next) {
       const continueBtn = document.createElement('button');
@@ -361,6 +617,12 @@ class StoryEngine {
 
   // --- Restart --------------------------------------
   restartGame() {
+    this.listenMode = false;
+    this.narrator.stop();
+    this.narrator.clearCache();
+    this._updateAudioUI('stopped');
+    this.audioBar.classList.remove('visible');
+
     this.storyScene.classList.remove('active');
     this.storyScene.innerHTML = '';
     this.chapterIndicator.classList.remove('visible');
