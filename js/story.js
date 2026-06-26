@@ -245,6 +245,7 @@ class StoryEngine {
       'Trombone-Blob-WMC-STYLE.svg',
       'Dirigent-Blob-WMC-STYLE.svg'
     ];
+    this.soundEngine = new SoundEngine();
   }
 
   init() {
@@ -428,6 +429,7 @@ class StoryEngine {
     this.scenesVisited++;
     this.updateProgress();
     this.activeScene = scene;
+    this.soundEngine.playScene(sceneId);
 
     const moodColor = sceneMoodColors[sceneId] || '#ffdd00';
     document.documentElement.style.setProperty('--scene-accent', moodColor);
@@ -644,6 +646,7 @@ class StoryEngine {
     this.narrator.stop();
     this.narrator.clearCache();
     this._updateAudioUI('stopped');
+    this.soundEngine.stopAll();
     this.audioBar.classList.remove('visible');
 
     this.storyScene.classList.remove('active');
