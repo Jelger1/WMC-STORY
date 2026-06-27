@@ -49,10 +49,18 @@ body {
 
 .wmc-circle-bg {
   position: fixed; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px; height: 600px; border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.06);
+  width: 80vmin; height: 80vmin;
+  background: url('../WMC-RONDJE.svg') center/contain no-repeat;
+  border-radius: 0;
+  border: none;
   pointer-events: none; z-index: 0;
+  opacity: 0.08;
+  filter: invert(1) sepia(1) saturate(2) hue-rotate(10deg);
+  animation: wmcRondjeRotate 90s linear infinite;
+}
+@keyframes wmcRondjeRotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 #game-container {
@@ -361,12 +369,7 @@ body {
 }
 #blob-decorations.active { opacity: 1; }
 .blob-decor {
-  position: absolute;
-  width: 120px; height: auto;
-  opacity: 0.12;
-  filter: blur(0.5px);
-  transition: all 1.5s ease;
-  animation: blobFloat 6s ease-in-out infinite;
+  display: none;
 }
 .blob-decor:nth-child(even) { animation-direction: reverse; }
 .blob-decor.blob-left { left: 2vw; }
@@ -514,13 +517,13 @@ body {
   .choice-btn .choice-label { font-size: 0.95rem; }
   .choice-btn .choice-desc { font-size: 0.85rem; }
   .continue-btn { padding: 0.85rem 2rem; font-size: 0.9rem; }
-  .wmc-circle-bg { width: 400px; height: 400px; }
+  .wmc-circle-bg { width: 70vmin; height: 70vmin; }
   .wmc-logo-img { width: 180px; }
   .lang-btn { width: 170px; padding: 1.5rem 1rem; }
   .how-section { padding: 1.2rem 1.5rem; }
   .how-steps li { font-size: 0.85rem; }
   .intro-text { font-size: 0.95rem; }
-  .blob-decor { width: 80px; opacity: 0.08; }
+  .blob-decor { display: none; }
   .audio-fab { width: 36px; height: 36px; }
   .audio-fab-icon { font-size: 0.8rem; }
 }
@@ -547,7 +550,7 @@ body {
   .ending-screen .ending-title { font-size: 1.6rem; }
   .ending-screen .ending-text { font-size: 0.95rem; }
   .viva-shape { display: none; }
-  .wmc-circle-bg { width: 300px; height: 300px; }
+  .wmc-circle-bg { width: 90vmin; height: 90vmin; }
   .wmc-logo-img { width: 150px; }
   .lang-buttons { flex-direction: column; gap: 1rem; }
   .lang-btn { width: 220px; }
@@ -555,7 +558,7 @@ body {
   .how-section { padding: 1rem 1.2rem; }
   .how-steps li { font-size: 0.82rem; padding-left: 1.6rem; }
   .intro-text { font-size: 0.9rem; }
-  .blob-decor { width: 60px; opacity: 0.06; }
+  .blob-decor { display: none; }
   .audio-fab { width: 34px; height: 34px; left: 1rem; bottom: 1rem; }
   .audio-fab.visible { bottom: 1rem; }
   .audio-fab-icon { font-size: 0.75rem; }

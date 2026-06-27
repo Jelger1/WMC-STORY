@@ -48,7 +48,7 @@ const content = {
       audioLoading: 'Stem laden...',
       howTitle: 'Hoe werkt het?',
       howSteps: [
-        'Lees het verhaal op je eigen tempo door op <strong>Lees verder</strong> te klikken, of druk op <strong>▶</strong> links onder om het verhaal te beluisteren met unieke stemmen per personage.',
+        'Lees het verhaal op je eigen tempo door op <strong>Lees verder</strong> te klikken, of druk op <strong>▶</strong> links onder om het verhaal te laten voorlezen.',
         'Maak keuzes wanneer die verschijnen. Elke keuze verandert het verloop van het verhaal.',
         'Twee verborgen meters, <strong>Stadstrots</strong> en <strong>Openheid</strong>, houden bij wat voor leider je bent.',
         'Er zijn vier verschillende eindes mogelijk. Speel opnieuw om ze allemaal te ontdekken.'
@@ -613,7 +613,7 @@ const content = {
       audioLoading: 'Loading voice...',
       howTitle: 'How does it work?',
       howSteps: [
-        'Read the story at your own pace by clicking <strong>Read more</strong>, or press <strong>▶</strong> at the bottom left to hear the story narrated with unique voices for each character.',
+        'Read the story at your own pace by clicking <strong>Read more</strong>, or press <strong>▶</strong> at the bottom left to have the story read aloud.',
         'Make choices when they appear. Each choice changes the course of the story.',
         'Two hidden meters, <strong>City Pride</strong> and <strong>Openness</strong>, track what kind of leader you are.',
         'Four different endings are possible. Play again to discover them all.'

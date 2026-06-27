@@ -39,27 +39,37 @@ class VoiceNarrator {
       this.synth.onvoiceschanged = () => this.synth.getVoices();
     }
 
-    // Character voice settings (pitch, rate) for differentiation
-    this.characterVoices = {
-      _narrator:              { pitch: 1.0,  rate: 0.95 },  // neutral — verteller
-      'Zef':                  { pitch: 0.8,  rate: 1.0  },  // low, steady — mijnwerker
-      'Jan Meijs':            { pitch: 0.9,  rate: 0.9  },  // authoritative — comitévoorzitter
-      'Pie Slijpen':          { pitch: 1.1,  rate: 1.05 },  // lighter, expressive — comitélid
-      'Mevr. Cremers':        { pitch: 1.3,  rate: 0.95 },  // warm female — hostelcoördinator
-      'Mrs Cremers':          { pitch: 1.3,  rate: 0.95 },
-      'Müller':               { pitch: 0.7,  rate: 0.85 },  // deep, older — oude mijnwerker
-      'Mueller':              { pitch: 0.7,  rate: 0.85 },
-      'F. Tompkins':          { pitch: 1.05, rate: 1.0  },  // British flair — Engelse bandleider
-      'Tompkins':             { pitch: 1.05, rate: 1.0  },
-      'Bandleider':           { pitch: 0.85, rate: 0.9  },  // commanding — Duitse orkestleider
-      'Bandleader':           { pitch: 0.85, rate: 0.9  },
-      'Trombonist':           { pitch: 1.0,  rate: 1.05 },  // youthful — Belgische muzikant
-      'Belgische trombonist': { pitch: 1.0,  rate: 1.05 },
-      'Klarinettist':         { pitch: 1.15, rate: 0.95 },  // clear — Duitse muzikant
-      'Clarinettist':         { pitch: 1.15, rate: 0.95 },
-      'Iemand achteraan':     { pitch: 0.95, rate: 1.1  },  // distinct — anoniem café
-      'Someone in the back':  { pitch: 0.95, rate: 1.1  }
-    };
+    // Preferred voice names per platform/OS — one clear voice per language
+    // Order matters: first match wins
+    this._preferredNL = [
+      'Xander',           // macOS / iOS Dutch male
+      'Lotte',            // Windows Dutch female
+      'nl-NL-Standard-B', // Google Cloud NL
+      'nl-NL',            // generic fallback
+    ];
+    this._preferredEN = [
+      'Daniel',           // macOS / iOS English (UK) — clear & natural
+      'Karen',            // macOS / iOS English (AU)
+      'Google UK English Male',
+      'Google US English',
+      'Microsoft David',  // Windows EN male
+      'Microsoft Zira',   // Windows EN female
+      'en-US',            // generic fallback
+    ];
+  }
+
+  // --- Pick the best available voice for a language -------
+  _pickVoice(langCode) {
+    const voices = this.synth.getVoices();
+    const preferred = langCode === 'nl' ? this._preferredNL : this._preferredEN;
+    const langTag   = langCode === 'nl' ? 'nl' : 'en';
+    // 1. Try exact preferred name match
+    for (const name of preferred) {
+      const v = voices.find(v => v.name.includes(name));
+      if (v) return v;
+    }
+    // 2. Fall back to first voice matching the language
+    return voices.find(v => v.lang.startsWith(langTag)) || null;
   }
 
   // --- Parse beat into segments ---
@@ -97,28 +107,19 @@ class VoiceNarrator {
     return new Promise((resolve) => {
       this._highlightElement(segment.element);
 
-      const voiceSettings = this.characterVoices[segment.speaker] || this.characterVoices._narrator;
       const utterance = new SpeechSynthesisUtterance(segment.text);
       const langCode = gameState.lang === 'nl' ? 'nl' : 'en';
-      utterance.lang = langCode === 'nl' ? 'nl-NL' : 'en-US';
+      utterance.lang = langCode === 'nl' ? 'nl-NL' : 'en-GB';
 
-      // Pick a voice per character — cycle through available voices for variety
-      const voices = this.synth.getVoices().filter(v => v.lang.startsWith(langCode));
-      if (voices.length > 0) {
-        // Assign a consistent voice index per speaker name
-        const speakerKey = segment.speaker || '_narrator';
-        let hash = 0;
-        for (let i = 0; i < speakerKey.length; i++) {
-          hash = ((hash << 5) - hash) + speakerKey.charCodeAt(i);
-          hash |= 0;
-        }
-        const idx = Math.abs(hash) % voices.length;
-        utterance.voice = voices[idx];
-        utterance.lang = voices[idx].lang;
+      // Use one consistent, clear voice for the entire story
+      const voice = this._pickVoice(langCode);
+      if (voice) {
+        utterance.voice = voice;
+        utterance.lang  = voice.lang;
       }
 
-      utterance.pitch = voiceSettings.pitch;
-      utterance.rate = voiceSettings.rate;
+      utterance.pitch = 1.0;
+      utterance.rate  = 0.92;  // slightly slower for clarity
 
       this.currentUtterance = utterance;
       this._resolveSpeak = resolve;
@@ -130,9 +131,7 @@ class VoiceNarrator {
         resolve();
       };
       utterance.onerror = (e) => {
-        if (e.error === 'canceled' || e.error === 'interrupted') {
-          // intentional stop/cancel
-        } else {
+        if (e.error !== 'canceled' && e.error !== 'interrupted') {
           console.warn('Speech error:', e.error);
         }
         this._removeHighlight();
@@ -693,7 +692,6 @@ class VivaCanvas {
   createShapes() {
     const count = Math.floor((this.canvas.width * this.canvas.height) / 25000);
     for (let i = 0; i < count; i++) {
-      const type = Math.random();
       this.shapes.push({
         x: Math.random() * this.canvas.width,
         y: Math.random() * this.canvas.height,
@@ -703,7 +701,7 @@ class VivaCanvas {
         rotation: Math.random() * Math.PI * 2,
         rotSpeed: (Math.random() - 0.5) * 0.005,
         color: this.colors[Math.floor(Math.random() * this.colors.length)],
-        type: type < 0.4 ? 'circle' : type < 0.7 ? 'triangle' : 'rect',
+        type: 'circle',
         pulse: Math.random() * Math.PI * 2,
         opacity: Math.random() * 0.6 + 0.2
       });
