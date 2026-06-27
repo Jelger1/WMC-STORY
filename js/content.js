@@ -64,8 +64,8 @@ const content = {
       ch1_deuren: 'Hopelstraat',
       ch1_cafe: 'Caf\u00e9 De Kroon, die avond',
       ch1_frickley: 'Station Kerkrade, een week later',
-      ch1_schmitz: 'Huiskamer Schmitz, Domanialstraat',
-      ch1_janssen: 'Hopelstraat, die avond',
+      ch1_schmitz: 'Huiskamer Schmitz, Nieuwstraat',
+      ch1_janssen: 'Familie Pilipiec, Hopelstraat, die avond',
       ch2_intro: 'Station Kerkrade',
       ch2_muziek: 'Het stationsplein',
       ch2_veilig: 'Het stationsplein',
@@ -171,7 +171,7 @@ const content = {
 
           <p><span class="dialogue"><span class="speaker">Mevr. Cremers</span>"E\u00e9ntje. Meer niet. En hij eet wat de pot schaft."</span></p>
 
-          <p>Zo gaat het de hele dag. Deur na deur. Soms een nee. Soms een aarzelend ja. Soms een enthousiast "doe maar twee!" Bij de oude M\u00fcller op nummer 37 krijgt hij koffie en drie bedden aangeboden. Bij de Janssens een koele blik en een dichte deur.</p>
+          <p>Zo gaat het de hele dag. Deur na deur. Soms een nee. Soms een aarzelend ja. Soms een enthousiast "doe maar twee!" Bij de oude M\u00fcller op nummer 37 krijgt hij koffie en drie bedden aangeboden. Bij de Pilipiec-familie een koele blik en een dichte deur.</p>
 
           <p>Tegen de avond heeft Zef twee\u00ebnzestig bedden. Nog net niet genoeg. Maar het is een begin, en de hele wijk praat erover.</p>
         `,
@@ -288,7 +288,7 @@ const content = {
 
           <p>Tompkins speelt na het eten een wijsje op zijn trompet voor de kinderen. De kleine Marieke danst in haar nachtpon door de kamer. Iedereen lacht.</p>
 
-          <p>Later, als het stil is en Zef naar huis loopt, vraagt hij zich af of hij de juiste keuze heeft gemaakt. De Janssens zijn geweldig. Maar de Schmitz-familie had misschien iets <em>meer</em> gekund. Iets wat verder gaat dan gastvrijheid alleen.</p>
+          <p>Later, als het stil is en Zef naar huis loopt, vraagt hij zich af of hij de juiste keuze heeft gemaakt. De familie Pilipiec is geweldig. Maar de Schmitz-familie had misschien iets <em>meer</em> gekund. Iets wat verder gaat dan gastvrijheid alleen.</p>
 
           <p>Hij schudt zijn hoofd. Het is goed zo. De muzikanten slapen warm, de kinderen zijn blij, en morgen begint de echte chaos.</p>
         `,
@@ -629,8 +629,8 @@ const content = {
       ch1_deuren: 'Hopelstraat',
       ch1_cafe: 'Caf\u00e9 De Kroon, that evening',
       ch1_frickley: 'Kerkrade Station, one week later',
-      ch1_schmitz: 'Schmitz Living Room, Domanialstraat',
-      ch1_janssen: 'Hopelstraat, that evening',
+      ch1_schmitz: 'Schmitz Living Room, Nieuwstraat',
+      ch1_janssen: 'Pilipiec Family, Hopelstraat, that evening',
       ch2_intro: 'Kerkrade Station',
       ch2_muziek: 'The station square',
       ch2_veilig: 'The station square',
@@ -736,7 +736,7 @@ const content = {
 
           <p><span class="dialogue"><span class="speaker">Mrs Cremers</span>"One. No more. And he eats what I cook."</span></p>
 
-          <p>And so it goes, all day long. Door after door. Sometimes a no. Sometimes a hesitant yes. Sometimes an enthusiastic "make it two!" Old M\u00fcller at number 37 offers him coffee and three beds. The Janssens give him a cold look and a closed door.</p>
+          <p>And so it goes, all day long. Door after door. Sometimes a no. Sometimes a hesitant yes. Sometimes an enthusiastic "make it two!" Old M\u00fcller at number 37 offers him coffee and three beds. The Pilipiec family give him a cold look and a closed door.</p>
 
           <p>By evening, Zef has sixty-two beds. Not quite enough. But it is a start, and the whole neighbourhood is talking about it.</p>
         `,
@@ -853,7 +853,7 @@ const content = {
 
           <p>After dinner, Tompkins plays a tune on his trumpet for the children. Little Marieke dances through the room in her nightgown. Everyone laughs.</p>
 
-          <p>Later, when it is quiet and Zef walks home, he wonders whether he made the right choice. The Janssens are wonderful. But the Schmitz family might have offered something <em>more</em>. Something that goes beyond hospitality alone.</p>
+          <p>Later, when it is quiet and Zef walks home, he wonders whether he made the right choice. The Pilipiec family are wonderful. But the Schmitz family might have offered something <em>more</em>. Something that goes beyond hospitality alone.</p>
 
           <p>He shakes his head. It is fine. The musicians are sleeping warm, the children are happy, and tomorrow the real chaos begins.</p>
         `,
