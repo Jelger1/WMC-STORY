@@ -49,8 +49,8 @@ class VoiceNarrator {
       'Mrs Cremers':          { pitch: 1.3,  rate: 0.95 },
       'Müller':               { pitch: 0.7,  rate: 0.85 },  // deep, older — oude mijnwerker
       'Mueller':              { pitch: 0.7,  rate: 0.85 },
-      'Tom Atkinson':         { pitch: 1.05, rate: 1.0  },  // British flair — Engelse bandleider
-      'Atkinson':             { pitch: 1.05, rate: 1.0  },
+      'F. Tompkins':          { pitch: 1.05, rate: 1.0  },  // British flair — Engelse bandleider
+      'Tompkins':             { pitch: 1.05, rate: 1.0  },
       'Bandleider':           { pitch: 0.85, rate: 0.9  },  // commanding — Duitse orkestleider
       'Bandleader':           { pitch: 0.85, rate: 0.9  },
       'Trombonist':           { pitch: 1.0,  rate: 1.05 },  // youthful — Belgische muzikant

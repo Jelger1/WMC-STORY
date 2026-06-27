@@ -89,7 +89,7 @@ const content = {
 
           <p>Maar vanochtend voelt de lucht anders. Lichter, misschien. Want er hangt iets in de stad dat Zef niet kan thuisbrengen. Een soort koorts, maar dan de goede variant. Overal waar hij kijkt, ziet hij vlaggen. Nederlandse, Belgische, Britse, Franse, ze hangen uit ramen die normaal nooit open gaan.</p>
 
-          <p><em>Augustus 1951.</em> Over drie weken begint het eerste Wereld Muziek Concours. En Zef Houben, vierentwintig jaar, voormalig mijnwerker, ritselaar bij de gratie Gods, heeft net de opdracht van zijn leven gekregen.</p>
+          <p><em>Augustus 1951.</em> Over drie weken begint het eerste Wereld Muziek Concours. En Zef Houben, drieënveertig jaar, muzikant bij harmonie Sint-Cecilia en voormalig mijnwerker, ritselaar bij de gratie Gods, heeft net de opdracht van zijn leven gekregen.</p>
         `,
         continueText: 'Verder \u2192',
         next: 'missie'
@@ -105,7 +105,7 @@ const content = {
 
           <p>Jan Meijs, voorzitter van het organisatiecomit\u00e9, schuift een vel papier naar hem toe. Naast hem knikt Pie Slijpen kort. Die man verspilt nooit een woord.</p>
 
-          <p><span class="dialogue"><span class="speaker">Jan Meijs</span>"Luister goed, jong. We krijgen vierduizend muzikanten. Uit dertien landen. Dat is over drie weken. En we hebben een probleem."</span></p>
+          <p><span class="dialogue"><span class="speaker">Jan Meijs</span>"Luister goed, jong. We krijgen vierduizend muzikanten. Uit zeventien landen. Dat is over drie weken. En we hebben een probleem."</span></p>
 
           <p>Meijs tikt met zijn vinger op het papier. Het is een lijst met namen, adressen, doorgestreepte regels, vraagtekens.</p>
 
@@ -117,7 +117,7 @@ const content = {
 
           <p>Hij kijkt Zef recht aan.</p>
 
-          <p><span class="dialogue"><span class="speaker">Jan Meijs</span>"En er is nog iets. De Frickley Colliery Band komt. Uit Yorkshire. Mijnwerkers, net als wij. Die moeten we goed ontvangen, die mannen zijn de reden dat dit hele concours \u00fcberhaupt bestaat."</span></p>
+          <p><span class="dialogue"><span class="speaker">Jan Meijs</span>"En er is nog iets. De Darlington Railway Band komt. Uit Newcastle. Mijnwerkers, net als wij. Die moeten we goed ontvangen, die mannen zijn de reden dat dit hele concours \u00fcberhaupt bestaat."</span></p>
 
           <p>Zef kent het verhaal. Twee jaar geleden, in '49, kwamen die Engelse mijnwerkers naar Kerkrade. Harmonie St. Aemiliaan uit Bleijerheide en St. Pancratius uit Nulland hadden ze uitgenodigd. Vijfduizend mensen kwamen kijken. <em>Vijfduizend.</em> En toen wist iedereen: hier moet meer van komen.</p>
 
@@ -131,7 +131,7 @@ const content = {
         chapter: 'Hoofdstuk 1',
         chapterTitle: 'De Bedden-nood',
         text: `
-          <p>Zef leunt achterover en denkt na. Honderd bedden in drie weken. In Hopel, een wijk waar de mensen niet bepaald zitten te wachten op vreemden in hun huis. De oorlog is nog geen tien jaar geleden. Veel mensen zijn terughoudend, op hun hoede. Maar Zef weet ook dat achter die gesloten gordijnen het grootste hart van Kerkrade klopt.</p>
+          <p>Zef leunt achterover en denkt na. Honderd gezinnen in drie weken die een muzikant onderdak geven, kost en inwoning, in ruil voor een concourspas. In Hopel, een wijk waar de mensen niet bepaald zitten te wachten op vreemden in hun huis. De oorlog is pas vijf jaar geleden. Veel mensen zijn terughoudend, op hun hoede. Maar Zef weet ook dat achter die gesloten gordijnen het grootste hart van Kerkrade klopt.</p>
 
           <p>De vraag is: hoe krijg je die deuren open?</p>
         `,
@@ -163,7 +163,7 @@ const content = {
 
           <p><span class="dialogue"><span class="speaker">Zef</span>"Mevrouw Cremers, ik kom vragen of u een muzikant in huis wilt nemen. Voor het concours."</span></p>
 
-          <p><span class="dialogue"><span class="speaker">Mevr. Cremers</span>"Onzin. Ik heb niet eens een logeerbed."</span></p>
+          <p><span class="dialogue"><span class="speaker">Mevr. Cremers</span>"Onzin. Ik heb niet eens een extra bed."</span></p>
 
           <p><span class="dialogue"><span class="speaker">Zef</span>"Een matras op de grond is ook goed. Het gaat om het gebaar, mevrouw. Die mannen komen van ver. Sommigen hebben de oorlog meegemaakt, net als wij. En ze brengen alleen maar muziek mee."</span></p>
 
@@ -189,7 +189,7 @@ const content = {
 
           <p>Het geroezemoes sterft langzaam weg. Dertig, veertig gezichten kijken omhoog. Mijnwerkers, huisvrouwen, de bakker van de hoek, de oude M\u00fcller die er altijd zit.</p>
 
-          <p><span class="dialogue"><span class="speaker">Zef</span>"Over drie weken komen er vierduizend muzikanten naar Kerkrade. Uit dertien landen. En die moeten ergens slapen. Niet in hotels, die hebben we niet. Niet in kazernes, die heeft het leger zelf nodig. Nee. Bij ons. In onze huizen."</span></p>
+          <p><span class="dialogue"><span class="speaker">Zef</span>"Over drie weken komen er vierduizend muzikanten naar Kerkrade. Uit zeventien landen. En die moeten ergens slapen. Niet in hotels, die hebben we niet. Niet in kazernes, die heeft het leger zelf nodig. Nee. Bij ons. In onze huizen."</span></p>
 
           <p>Gemompel. Hier en daar een lach.</p>
 
@@ -197,7 +197,7 @@ const content = {
 
           <p>Gelach. Zef grinnikt mee, maar gaat door.</p>
 
-          <p><span class="dialogue"><span class="speaker">Zef</span>"Weten jullie nog, twee jaar geleden? Die Engelse mijnwerkers die hier kwamen spelen? De Frickley Colliery Band? Vijfduizend man stond te kijken op de Markt. En daarna zaten die Yorkshire-jongens bij Sjeng aan de bar, en wij verstonden geen woord van wat ze zeiden, maar het maakte niet uit. Want de muziek, <em>die</em> verstonden we."</span></p>
+          <p><span class="dialogue"><span class="speaker">Zef</span>"Weten jullie nog, twee jaar geleden? Die Engelse mijnwerkers die hier kwamen spelen? De Darlington Railway Band? Vijfduizend man stond te kijken op de Markt. En daarna zaten die Newcastle-jongens bij Sjeng aan de bar, en wij verstonden geen woord van wat ze zeiden, maar het maakte niet uit. Want de muziek, <em>die</em> verstonden we."</span></p>
 
           <p>Het is stil nu.</p>
 
@@ -222,17 +222,17 @@ const content = {
 
           <p>Een week later. Station Kerkrade. Het perron trilt onder de naderende trein uit het noorden.</p>
 
-          <p>De Frickley Colliery Band uit Yorkshire. Mijnwerkers, net als de mannen in Hopel. Alleen spreken ze Engels met zo'n zwaar accent dat zelfs andere Engelsen het niet verstaan. Ze stappen uit de trein met hun instrumentkoffers, verkreukelde pakken, en dat typisch Engelse mengsel van verlegenheid en vastberadenheid.</p>
+          <p>De Darlington Railway Band uit Newcastle. Mijnwerkers, net als de mannen in Hopel. Alleen spreken ze Engels met zo'n zwaar accent dat zelfs andere Engelsen het niet verstaan. Ze stappen uit de trein met hun instrumentkoffers, verkreukelde pakken, en dat typisch Engelse mengsel van verlegenheid en vastberadenheid.</p>
 
           <p>Zef staat te wachten met zijn lijst. De bandleider, een brede man met een snor als een schoenenborstel, steekt zijn hand uit.</p>
 
-          <p><span class="dialogue"><span class="speaker">Bandleider</span>"Tom Atkinson. Frickley Colliery. Where d'we go, lad?"</span></p>
+          <p><span class="dialogue"><span class="speaker">Bandleider</span>"F. Tompkins. Darlington Railway. Where d'we go, lad?"</span></p>
 
           <p>Zef schudt zijn hand. En nu moet hij beslissen. Op zijn lijst staan twee opties voor de Engelsen:</p>
 
-          <p>De <strong>familie Schmitz</strong> in de Domanialstraat, Duits-Limburgse achtergrond, oud-mijnwerkers, groot huis, spreken een beetje Engels. Maar de naam klinkt Duits, en sommige Britten... ja, de oorlog is pas zes jaar geleden.</p>
+          <p>De <strong>familie Schmitz</strong> in de Nieuwstraat, Duits-Limburgse achtergrond, oud-mijnwerkers, groot huis, spreken een beetje Engels. Maar de naam klinkt Duits, en sommige Britten... ja, de oorlog is pas vijf jaar geleden.</p>
 
-          <p>Of de <strong>familie Janssen</strong> aan de Hopelstraat, een gezellig Nederlands gezin, kleiner huis, maar niemand zal er iets achter zoeken.</p>
+          <p>Of de <strong>familie Pilipiec</strong> aan de Hopelstraat, een gezellig gezin, kleiner huis, maar niemand zal er iets achter zoeken.</p>
         `,
         choices: [
           {
@@ -242,7 +242,7 @@ const content = {
             effects: { stadstrots: 0, openheid: 2 }
           },
           {
-            label: 'Familie Janssen',
+            label: 'Familie Pilipiec',
             desc: 'Houd het simpel en veilig. Geen onnodige spanning. De muziek is al spannend genoeg.',
             next: 'ch1_janssen',
             effects: { stadstrots: 1, openheid: 0 }
@@ -254,17 +254,17 @@ const content = {
         chapter: null,
         chapterTitle: null,
         text: `
-          <p><span class="dialogue"><span class="speaker">Zef</span>"Schmitz. Domanialstraat. Oude mijnwerkers, net als jullie."</span></p>
+          <p><span class="dialogue"><span class="speaker">Zef</span>"Schmitz. Nieuwstraat. Oude mijnwerkers, net als jullie."</span></p>
 
-          <p>Hij ziet de aarzeling in de ogen van Tom Atkinson. <em>Schmitz.</em> De naam hangt even in de lucht. Maar dan doet Zef iets wat hij niet gepland had: hij trekt zijn hemd omhoog en laat de blauwe tatoeage zien op zijn onderarm. Een houweel en een lamp. Het mijnwerkersteken.</p>
+          <p>Hij ziet de aarzeling in de ogen van F. Tompkins. <em>Schmitz.</em> De naam hangt even in de lucht. Maar dan doet Zef iets wat hij niet gepland had: hij trekt zijn hemd omhoog en laat de blauwe tatoeage zien op zijn onderarm. Een houweel en een lamp. Het mijnwerkersteken.</p>
 
           <p><span class="dialogue"><span class="speaker">Zef</span>"Same job. Same dust. Same lungs."</span></p>
 
-          <p>Atkinson kijkt. Dan barst hij in lachen uit en slaat Zef op zijn schouder.</p>
+          <p>Tompkins kijkt. Dan barst hij in lachen uit en slaat Zef op zijn schouder.</p>
 
-          <p><span class="dialogue"><span class="speaker">Atkinson</span>"Right then. Schmitz it is."</span></p>
+          <p><span class="dialogue"><span class="speaker">Tompkins</span>"Right then. Schmitz it is."</span></p>
 
-          <p>Die avond, in de huiskamer van de Schmitz-familie, gebeurt wat Zef had gehoopt. Vader Schmitz, die in '44 zelf onder de Duitsers gewerkt heeft en er niet over praat, haalt zijn oude cornet van zolder. Stoffig, gedeukt, al jaren niet bespeeld. En zonder een woord te zeggen gaat hij naast Tom Atkinson zitten, die net zijn eigen instrument aan het oppoetsen is.</p>
+          <p>Die avond, in de huiskamer van de Schmitz-familie, gebeurt wat Zef had gehoopt. Vader Schmitz, die in '44 zelf onder de Duitsers gewerkt heeft en er niet over praat, haalt zijn oude cornet van zolder. Stoffig, gedeukt, al jaren niet bespeeld. En zonder een woord te zeggen gaat hij naast F. Tompkins zitten, die net zijn eigen instrument aan het oppoetsen is.</p>
 
           <p>Ze spelen. Geen noten, geen bladmuziek. Gewoon twee oude mijnwerkers die dezelfde melodie kennen zonder dat ze ooit dezelfde taal hebben gesproken.</p>
 
@@ -278,15 +278,15 @@ const content = {
         chapter: null,
         chapterTitle: null,
         text: `
-          <p><span class="dialogue"><span class="speaker">Zef</span>"Janssen. Hopelstraat. Goed volk, warm gezin."</span></p>
+          <p><span class="dialogue"><span class="speaker">Zef</span>"Pilipiec. Hopelstraat. Goed volk, warm gezin."</span></p>
 
-          <p>Atkinson knikt tevreden. De naam klinkt neutraal, vriendelijk. Geen lading.</p>
+          <p>Tompkins knikt tevreden. De naam klinkt neutraal, vriendelijk. Geen lading.</p>
 
-          <p>Bij de Janssens worden de Engelsen met open armen ontvangen. Mevrouw Janssen heeft erwtensoep gemaakt, "want ik weet niet wat Engelsen eten, maar erwtensoep lust iedereen," en de kinderen staan met grote ogen te kijken naar de vreemde mannen met hun grote zwarte koffers.</p>
+          <p>Bij de familie Pilipiec worden de Engelsen met open armen ontvangen. Mevrouw Pilipiec heeft Zondagse soep gemaakt, "want ik weet niet wat Engelsen eten, maar soep lust iedereen," en de kinderen staan met grote ogen te kijken naar de vreemde mannen met hun grote zwarte koffers.</p>
 
           <p>Het is gezellig. Warm. <em>Veilig.</em></p>
 
-          <p>Atkinson speelt na het eten een wijsje op zijn trompet voor de kinderen. De kleine Marieke danst in haar nachtpon door de kamer. Iedereen lacht.</p>
+          <p>Tompkins speelt na het eten een wijsje op zijn trompet voor de kinderen. De kleine Marieke danst in haar nachtpon door de kamer. Iedereen lacht.</p>
 
           <p>Later, als het stil is en Zef naar huis loopt, vraagt hij zich af of hij de juiste keuze heeft gemaakt. De Janssens zijn geweldig. Maar de Schmitz-familie had misschien iets <em>meer</em> gekund. Iets wat verder gaat dan gastvrijheid alleen.</p>
 
@@ -302,15 +302,15 @@ const content = {
         text: `
           <p>De week voor het concours barst Kerkrade uit zijn voegen.</p>
 
-          <p>Elke dag rollen er treinen binnen. Uit Brussel, uit Parijs, uit Londen, uit Wenen. Uit Stockholm en Rome. Dertien landen, tientallen orkesten, duizenden koffers vol instrumenten. De perrons zijn een kakofonie van talen, en Zef rent van spoor naar spoor met zijn notitieboekje en zijn lijst van gastgezinnen.</p>
+          <p>Elke dag arriveren er korpsen. Sommigen per trein — uit Brussel, uit Parijs, uit Londen, uit Wenen — maar de meesten met de bus, rechtstreeks naar de grote parkeerplaatsen en de verenigingsgebouwen in de wijken. Zeventien landen, tientallen orkesten, duizenden koffers vol instrumenten. Zef rent van perron naar parkeerplaats met zijn notitieboekje en zijn lijst van gastgezinnen.</p>
 
           <p>De stad verandert. Letterlijk. Waar gisteren nog grijs kolenstof hing, wapperen nu vlaggen van landen waarvan de meeste inwoners van Kerkrade het bestaan niet kenden. Er hangen spandoeken over de Markt. De bakker heeft speciaal brood gebakken in de vorm van muzieknoten. De kinderen lopen achter muzikanten aan alsof het circusartiesten zijn.</p>
 
           <p>En dan komt donderdagochtend.</p>
 
-          <p>Zef staat op perron 2, wachtend op de trein uit Aken. Daar zit een Duits blaasorkest in, het <strong>Bergkapelle Aachen</strong>. Goede muzikanten, heeft hij gehoord. Maar Duits. En dat is in 1951, zes jaar na de oorlog, geen detail.</p>
+          <p>Zef staat op perron 2, wachtend op de bus uit Duitsland. Daar zit een Duits blaasorkest in, de <strong>Musikvereine Hilden-Ohligs</strong>. Goede muzikanten, heeft hij gehoord. Maar Duits. En dat is in 1951, vijf jaar na de oorlog, geen detail.</p>
 
-          <p>Op datzelfde moment stopt op perron 1 de trein uit Luik. Er stapt een Belgisch-Waals korps uit: de <strong>Harmonie Royale de Li\u00e8ge</strong>. Mannen van wie sommigen in het verzet hebben gezeten. Mannen die de Duitsers nog heel goed kennen.</p>
+          <p>Op datzelfde moment stopt een bus uit de Belgische Oostkantons op het plein. Er stapt een Belgisch korps uit: de <strong>Fanfare B\u00fcllingen</strong>. Mannen van wie sommigen in het verzet hebben gezeten. Mannen die de Duitsers nog heel goed kennen.</p>
 
           <p>De twee groepen staan op hetzelfde stationsplein. De Duitsers met hun koffers links. De Belgen met hun instrumenten rechts. En ertussen: tien meter lege kasseien en een stilte waar je een speld kunt horen vallen.</p>
 
@@ -386,7 +386,7 @@ const content = {
 
           <p>Zef loopt voorop met het Duitse orkest. Ze zijn beleefd, correct. De bandleider, een lange, magere man met een bril, bedankt Zef in gebrekkig Nederlands.</p>
 
-          <p><span class="dialogue"><span class="speaker">Bandleider</span>"Dankesch\u00f6n. Wir... wissen dat het niet makkelijk ist."</span></p>
+          <p><span class="dialogue"><span class="speaker">Bandleider</span>"Dankesch\u00f6n. Wir... wissen, dass es nicht einfach ist."</span></p>
 
           <p>Zef knikt. Hij weet het. Het is niet makkelijk. Voor niemand.</p>
 
@@ -407,13 +407,13 @@ const content = {
 
           <p>De dagen die volgen zijn een waas van chaos, muziek en improvisatie.</p>
 
-          <p>Zef ritselt. Dat is wat hij doet. Hij ritselt bussen als de treinen niet rijden. Hij ritselt bierkratten als de voorraad opraakt. Hij ritselt een smid om een tuba te repareren die de reis vanuit Noorwegen niet overleefd heeft. Hij ritselt een vertaler Spaans als er een korps uit Madrid arriveert dat geen woord van alles verstaat.</p>
+          <p>Zef ritselt. Dat is wat hij doet. Hij ritselt bierkratten als de voorraad opraakt. Hij ritselt een smid om een tuba te repareren die de reis vanuit Denemarken niet overleefd heeft. Hij ritselt extra slaapplekken als een Noors korps met dubbel zoveel man aankomt als opgegeven.</p>
 
           <p>En langzaam, dag na dag, ziet hij iets gebeuren met Kerkrade.</p>
 
           <p>De stad komt tot leven. Niet een beetje, <em>helemaal.</em></p>
 
-          <p>Op de Markt oefent een Zweeds korps naast een Italiaans ensemble, en de koude Scandinavische klanken vloeien samen met de warme Mediterrane tonen op een manier die niemand had verwacht. In de Hopelstraat leren Engelse mijnwerkers van de Frickley Band de kinderen "It's a Long Way to Tipperary", en de kinderen leren ze "In het Mooiste Stadje" terug.</p>
+          <p>Op de Markt oefent een Zweeds korps naast een Italiaans ensemble, en de koude Scandinavische klanken vloeien samen met de warme Mediterrane tonen op een manier die niemand had verwacht. In de Hopelstraat leren Engelse muzikanten van de Darlington Railway Band de kinderen "It's a Long Way to Tipperary", en de kinderen leren ze "In het Mooiste Stadje" terug.</p>
 
           <p>Bij de tentoonstelling <em>Kirchroa Alaaf</em> op het Mucherveld staan rijen die twee straten lang zijn. Tweeduizend man, drieduizend. De organisatie had op vijftigduizend bezoekers gerekend voor het hele concours. Ze zitten nu al op honderdduizend en het is pas woensdag.</p>
 
@@ -432,7 +432,7 @@ const content = {
 
           <p>De laatste dag. De Markt van Kerkrade is onherkenbaar.</p>
 
-          <p>Waar normaal mijnwerkers met lege broodtrommels naar huis sjokken, staan nu tribunes. Provisorisch, gemaakt van hout en ijzer dat Zef "geleend" heeft van een bouwplaats bij de Domaniale. Het podium is versierd met de vlaggen van alle dertien deelnemende landen, en de zon, die eindelijk, <em>eindelijk</em> door de grijze wolken breekt, laat het koper van de instrumenten glanzen als goud.</p>
+          <p>Waar normaal mijnwerkers met lege broodtrommels naar huis sjokken, staan nu tribunes. Provisorisch, gemaakt van hout en ijzer dat Zef "geleend" heeft van een bouwplaats bij de Domaniale. Het podium is versierd met de vlaggen van alle zeventien deelnemende landen, en de zon, die eindelijk, <em>eindelijk</em> door de grijze wolken breekt, laat het koper van de instrumenten glanzen als goud.</p>
 
           <p>Tweehonderdduizend bezoekers. Dat getal gaat later de kranten in. Maar nu, op dit moment, is het gewoon een zee van mensen. Een zee die ademt, praat, lacht, en wacht.</p>
 
@@ -502,7 +502,7 @@ const content = {
 
           <p>Hij denkt aan het stationsplein. Aan de trombone en de klarinet die samen een melodie vonden die niet in de bladmuziek stond.</p>
 
-          <p><span class="dialogue"><span class="speaker">Zef</span>"Een concours, dat kan overal. In Brussel, in Londen, in Wenen. Maar een plek waar muzikanten uit de hele wereld samen iets <em>nieuws</em> maken? Waar een mijnwerkersband uit Yorkshire naast een harmonie uit Parijs staat en ze samen klinken als iets wat nog niemand eerder gehoord heeft? Dat kan alleen hier. Alleen in Kerkrade."</span></p>
+          <p><span class="dialogue"><span class="speaker">Zef</span>"Een concours, dat kan overal. In Brussel, in Londen, in Wenen. Maar een plek waar muzikanten uit de hele wereld samen iets <em>nieuws</em> maken? Waar een harmonie uit Newcastle naast een harmonie uit Parijs staat en ze samen klinken als iets wat nog niemand eerder gehoord heeft? Dat kan alleen hier. Alleen in Kerkrade."</span></p>
 
           <p>Pie Slijpen, die tot nu toe gezwegen heeft, schrapt zijn keel.</p>
 
@@ -528,11 +528,11 @@ const content = {
 
           <p>De vlaggen zijn weg. De tribunes afgebroken. Het hout terug naar de bouwplaats bij de Domaniale. Zef heeft het persoonlijk teruggebracht, 's nachts, want officieel had hij het nooit "geleend."</p>
 
-          <p>Kerkrade is weer grijs. Het kolenstof hangt weer in de lucht, de wekkers rinkelen weer om kwart voor vijf, en in de Hopelstraat zijn de logeerbedden weer opgeborgen.</p>
+          <p>Kerkrade is weer grijs. Het kolenstof hangt weer in de lucht, de wekkers rinkelen weer om kwart voor vijf, en in de Hopelstraat zijn de extra bedden weer opgeborgen.</p>
 
           <p>Maar er is iets veranderd.</p>
 
-          <p>Mevrouw Cremers heeft een foto in haar vensterbank gezet van de Noorse tubaspeler die bij haar gelogeerd heeft. "Een aardige jongen," zegt ze tegen iedereen die het horen wil. "At alles op." Bij de Schmitz-familie hangt een ingelijste brief van Tom Atkinson aan de muur, in een Engels dat ze niet helemaal verstaan maar dat ze desondanks koesteren.</p>
+          <p>Mevrouw Cremers heeft een foto in haar vensterbank gezet van de Noorse tubaspeler die bij haar gelogeerd heeft. "Een aardige jongen," zegt ze tegen iedereen die het horen wil. "At alles op." Bij de Schmitz-familie hangt een ingelijste brief van F. Tompkins aan de muur, in een Engels dat ze niet helemaal verstaan maar dat ze desondanks koesteren.</p>
 
           <p>En Zef? Zef zit op het bankje bij de Markt, op dezelfde plek waar drie weken geleden tweehonderdduizend mensen stonden. Het is stil nu. Alleen een merel fluit, ergens op een dak.</p>
 
@@ -542,7 +542,7 @@ const content = {
 
           <p><em>Dit was pas het begin.</em></p>
 
-          <p>Over vier jaar doen ze het weer. En dan wordt het groter. En dan is het hele land erbij. En dan de hele wereld.</p>
+          <p>In 1954 doen ze het weer. En dan wordt het groter. En dan is het hele land erbij. En dan de hele wereld.</p>
         `,
         continueText: null,
         next: null,
@@ -654,7 +654,7 @@ const content = {
 
           <p>But this morning the air feels different. Lighter, perhaps. Because something hangs in the city that Zef cannot quite place. A kind of fever, but the good kind. Everywhere he looks, he sees flags. Dutch, Belgian, British, French, they hang from windows that normally never open.</p>
 
-          <p><em>August 1951.</em> In three weeks, the first World Music Competition begins. And Zef Houben, twenty-four years old, former miner, fixer by the grace of God, has just received the assignment of his life.</p>
+          <p><em>August 1951.</em> In three weeks, the first World Music Competition begins. And Zef Houben, forty-three years old, musician with the Sint-Cecilia harmony and former miner, fixer by the grace of God, has just received the assignment of his life.</p>
         `,
         continueText: 'Continue \u2192',
         next: 'missie'
@@ -670,7 +670,7 @@ const content = {
 
           <p>Jan Meijs, chairman of the organising committee, pushes a sheet of paper towards him. Next to him, Pie Slijpen nods briefly. That man never wastes a word.</p>
 
-          <p><span class="dialogue"><span class="speaker">Jan Meijs</span>"Listen carefully, son. We are getting four thousand musicians. From thirteen countries. That is in three weeks. And we have a problem."</span></p>
+          <p><span class="dialogue"><span class="speaker">Jan Meijs</span>"Listen carefully, son. We are getting four thousand musicians. From seventeen countries. That is in three weeks. And we have a problem."</span></p>
 
           <p>Meijs taps his finger on the paper. It is a list of names, addresses, crossed-out lines, question marks.</p>
 
@@ -682,7 +682,7 @@ const content = {
 
           <p>He looks Zef straight in the eye.</p>
 
-          <p><span class="dialogue"><span class="speaker">Jan Meijs</span>"And there is something else. The Frickley Colliery Band is coming. From Yorkshire. Miners, just like us. We need to welcome them properly, those men are the reason this entire competition exists in the first place."</span></p>
+          <p><span class="dialogue"><span class="speaker">Jan Meijs</span>"And there is something else. The Darlington Railway Band is coming. From Newcastle. Miners, just like us. We need to welcome them properly, those men are the reason this entire competition exists in the first place."</span></p>
 
           <p>Zef knows the story. Two years ago, in '49, those English miners came to Kerkrade. The Harmonie St. Aemiliaan from Bleijerheide and St. Pancratius from Nulland had invited them. Five thousand people came to watch. <em>Five thousand.</em> And then everyone knew: there has to be more of this.</p>
 
@@ -696,7 +696,7 @@ const content = {
         chapter: 'Chapter 1',
         chapterTitle: 'The Bed Shortage',
         text: `
-          <p>Zef leans back and thinks. A hundred beds in three weeks. In Hopel, a neighbourhood where people are not exactly waiting for strangers in their homes. The war ended less than ten years ago. Many people are cautious, on their guard. But Zef also knows that behind those closed curtains beats the biggest heart in Kerkrade.</p>
+          <p>Zef leans back and thinks. A hundred families in three weeks willing to take a musician in — board, lodging and a competition pass in return. In Hopel, a neighbourhood where people are not exactly waiting for strangers in their homes. The war was only five years ago. Many people are cautious, on their guard. But Zef also knows that behind those closed curtains beats the biggest heart in Kerkrade.</p>
 
           <p>The question is: how do you get those doors to open?</p>
         `,
@@ -728,7 +728,7 @@ const content = {
 
           <p><span class="dialogue"><span class="speaker">Zef</span>"Mrs Cremers, I've come to ask if you would host a musician in your home. For the competition."</span></p>
 
-          <p><span class="dialogue"><span class="speaker">Mrs Cremers</span>"Nonsense. I don't even have a guest bed."</span></p>
+          <p><span class="dialogue"><span class="speaker">Mrs Cremers</span>"Nonsense. I don't even have an extra bed."</span></p>
 
           <p><span class="dialogue"><span class="speaker">Zef</span>"A mattress on the floor works too. It's about the gesture, ma'am. These men come from far away. Some of them lived through the war, just like us. And they only bring music."</span></p>
 
@@ -754,7 +754,7 @@ const content = {
 
           <p>The murmur slowly dies away. Thirty, forty faces look up. Miners, housewives, the baker from the corner, old M\u00fcller who is always there.</p>
 
-          <p><span class="dialogue"><span class="speaker">Zef</span>"In three weeks, four thousand musicians are coming to Kerkrade. From thirteen countries. And they need somewhere to sleep. Not in hotels, we don't have any. Not in barracks, the army needs those. No. With us. In our homes."</span></p>
+          <p><span class="dialogue"><span class="speaker">Zef</span>"In three weeks, four thousand musicians are coming to Kerkrade. From seventeen countries. And they need somewhere to sleep. Not in hotels, we don't have any. Not in barracks, the army needs those. No. With us. In our homes."</span></p>
 
           <p>Murmuring. A laugh here and there.</p>
 
@@ -762,7 +762,7 @@ const content = {
 
           <p>Laughter. Zef grins along, but continues.</p>
 
-          <p><span class="dialogue"><span class="speaker">Zef</span>"Do you remember, two years ago? Those English miners who came here to play? The Frickley Colliery Band? Five thousand people watched on the Market Square. And afterwards, those Yorkshire lads sat at Sjeng's bar, and we didn't understand a word they said, but it didn't matter. Because the music, <em>that</em> we understood."</span></p>
+          <p><span class="dialogue"><span class="speaker">Zef</span>"Do you remember, two years ago? Those English miners who came here to play? The Darlington Railway Band? Five thousand people watched on the Market Square. And afterwards, those Newcastle lads sat at Sjeng's bar, and we didn't understand a word they said, but it didn't matter. Because the music, <em>that</em> we understood."</span></p>
 
           <p>It is quiet now.</p>
 
@@ -787,17 +787,17 @@ const content = {
 
           <p>One week later. Kerkrade Station. The platform trembles under the approaching train from the north.</p>
 
-          <p>The Frickley Colliery Band from Yorkshire. Miners, just like the men in Hopel. Except they speak English with such a thick accent that even other Englishmen cannot understand them. They step off the train with their instrument cases, crumpled suits, and that typically English mixture of shyness and determination.</p>
+          <p>The Darlington Railway Band from Newcastle. Miners, just like the men in Hopel. Except they speak English with such a thick accent that even other Englishmen cannot understand them. They step off the train with their instrument cases, crumpled suits, and that typically English mixture of shyness and determination.</p>
 
           <p>Zef is waiting with his list. The bandleader, a broad man with a moustache like a shoe brush, extends his hand.</p>
 
-          <p><span class="dialogue"><span class="speaker">Bandleader</span>"Tom Atkinson. Frickley Colliery. Where d'we go, lad?"</span></p>
+          <p><span class="dialogue"><span class="speaker">Bandleader</span>"F. Tompkins. Darlington Railway. Where d'we go, lad?"</span></p>
 
           <p>Zef shakes his hand. And now he must decide. On his list are two options for the English:</p>
 
-          <p>The <strong>Schmitz family</strong> on Domanialstraat, German-Limburgish background, former miners, large house, speak a little English. But the name sounds German, and some of the British... well, the war was only six years ago.</p>
+          <p>The <strong>Schmitz family</strong> on Nieuwstraat, German-Limburgish background, former miners, large house, speak a little English. But the name sounds German, and some of the British... well, the war was only five years ago.</p>
 
-          <p>Or the <strong>Janssen family</strong> on Hopelstraat, a friendly Dutch household, smaller house, but nobody will think twice about the name.</p>
+          <p>Or the <strong>Pilipiec family</strong> on Hopelstraat, a welcoming family in the neighbourhood, smaller house, but nobody will think twice.</p>
         `,
         choices: [
           {
@@ -807,7 +807,7 @@ const content = {
             effects: { stadstrots: 0, openheid: 2 }
           },
           {
-            label: 'The Janssen family',
+            label: 'The Pilipiec family',
             desc: 'Keep it simple and safe. No unnecessary tension. The music is exciting enough.',
             next: 'ch1_janssen',
             effects: { stadstrots: 1, openheid: 0 }
@@ -819,17 +819,17 @@ const content = {
         chapter: null,
         chapterTitle: null,
         text: `
-          <p><span class="dialogue"><span class="speaker">Zef</span>"Schmitz. Domanialstraat. Old miners, just like you."</span></p>
+          <p><span class="dialogue"><span class="speaker">Zef</span>"Schmitz. Nieuwstraat. Old miners, just like you."</span></p>
 
-          <p>He sees the hesitation in Tom Atkinson's eyes. <em>Schmitz.</em> The name hangs in the air for a moment. But then Zef does something unplanned: he pulls up his shirt and shows the blue tattoo on his forearm. A pickaxe and a lamp. The miner's mark.</p>
+          <p>He sees the hesitation in F. Tompkins's eyes. <em>Schmitz.</em> The name hangs in the air for a moment. But then Zef does something unplanned: he pulls up his shirt and shows the blue tattoo on his forearm. A pickaxe and a lamp. The miner's mark.</p>
 
           <p><span class="dialogue"><span class="speaker">Zef</span>"Same job. Same dust. Same lungs."</span></p>
 
-          <p>Atkinson looks. Then he bursts out laughing and claps Zef on the shoulder.</p>
+          <p>Tompkins looks. Then he bursts out laughing and claps Zef on the shoulder.</p>
 
-          <p><span class="dialogue"><span class="speaker">Atkinson</span>"Right then. Schmitz it is."</span></p>
+          <p><span class="dialogue"><span class="speaker">Tompkins</span>"Right then. Schmitz it is."</span></p>
 
-          <p>That evening, in the living room of the Schmitz family, what Zef had hoped for happens. Father Schmitz, who worked under the Germans in '44 and never speaks of it, brings his old cornet down from the attic. Dusty, dented, unplayed for years. And without saying a word, he sits down next to Tom Atkinson, who is busy polishing his own instrument.</p>
+          <p>That evening, in the living room of the Schmitz family, what Zef had hoped for happens. Father Schmitz, who worked under the Germans in '44 and never speaks of it, brings his old cornet down from the attic. Dusty, dented, unplayed for years. And without saying a word, he sits down next to F. Tompkins, who is busy polishing his own instrument.</p>
 
           <p>They play. No sheet music, no notes. Just two old miners who know the same melody without ever having spoken the same language.</p>
 
@@ -843,15 +843,15 @@ const content = {
         chapter: null,
         chapterTitle: null,
         text: `
-          <p><span class="dialogue"><span class="speaker">Zef</span>"Janssen. Hopelstraat. Good people, warm family."</span></p>
+          <p><span class="dialogue"><span class="speaker">Zef</span>"Pilipiec. Hopelstraat. Good people, warm family."</span></p>
 
-          <p>Atkinson nods, satisfied. The name sounds neutral, friendly. No baggage.</p>
+          <p>Tompkins nods, satisfied. The name sounds neutral, friendly. No baggage.</p>
 
-          <p>At the Janssens', the English are welcomed with open arms. Mrs Janssen has made pea soup, "because I don't know what Englishmen eat, but everyone likes pea soup," and the children stare wide-eyed at the strange men with their big black cases.</p>
+          <p>At the Pilipiec family, the English are welcomed with open arms. Mrs Pilipiec has made Sunday soup, "because I don't know what Englishmen eat, but everyone enjoys a good soup," and the children stare wide-eyed at the strange men with their big black cases.</p>
 
           <p>It is cosy. Warm. <em>Safe.</em></p>
 
-          <p>After dinner, Atkinson plays a tune on his trumpet for the children. Little Marieke dances through the room in her nightgown. Everyone laughs.</p>
+          <p>After dinner, Tompkins plays a tune on his trumpet for the children. Little Marieke dances through the room in her nightgown. Everyone laughs.</p>
 
           <p>Later, when it is quiet and Zef walks home, he wonders whether he made the right choice. The Janssens are wonderful. But the Schmitz family might have offered something <em>more</em>. Something that goes beyond hospitality alone.</p>
 
@@ -867,15 +867,15 @@ const content = {
         text: `
           <p>In the week before the competition, Kerkrade bursts at the seams.</p>
 
-          <p>Every day, trains roll in. From Brussels, from Paris, from London, from Vienna. From Stockholm and Rome. Thirteen countries, dozens of orchestras, thousands of cases full of instruments. The platforms are a cacophony of languages, and Zef runs from track to track with his notebook and his list of host families.</p>
+          <p>Every day, more ensembles arrive. Some by train — from Brussels, from Paris, from London, from Vienna — but most by bus, directly to the large car parks and the association buildings in the neighbourhoods. Seventeen countries, dozens of orchestras, thousands of cases full of instruments. Zef runs from platform to car park with his notebook and his list of host families.</p>
 
           <p>The city is transforming. Literally. Where yesterday there was only grey coal dust, flags now flutter from countries that most residents of Kerkrade did not even know existed. Banners hang across the Market Square. The baker has baked special bread in the shape of musical notes. Children follow musicians around as if they were circus performers.</p>
 
           <p>And then Thursday morning arrives.</p>
 
-          <p>Zef stands on platform 2, waiting for the train from Aachen. It carries a German brass orchestra, the <strong>Bergkapelle Aachen</strong>. Good musicians, he has heard. But German. And in 1951, six years after the war, that is no small detail.</p>
+          <p>Zef stands near the car park, waiting for the bus from Germany. It carries a German brass ensemble, the <strong>Musikvereine Hilden-Ohligs</strong>. Good musicians, he has heard. But German. And in 1951, five years after the war, that is no small detail.</p>
 
-          <p>At the same moment, the train from Li\u00e8ge stops at platform 1. A Belgian-Walloon ensemble steps out: the <strong>Harmonie Royale de Li\u00e8ge</strong>. Men, some of whom served in the resistance. Men who remember the Germans very well.</p>
+          <p>At the same moment, a bus from the Belgian East Cantons pulls up in the square. A Belgian ensemble steps out: the <strong>Fanfare B\u00fcllingen</strong>. Men, some of whom served in the resistance. Men who remember the Germans very well.</p>
 
           <p>The two groups stand on the same station square. The Germans with their cases on the left. The Belgians with their instruments on the right. And between them: ten metres of empty cobblestones and a silence in which you could hear a pin drop.</p>
 
@@ -951,7 +951,7 @@ const content = {
 
           <p>Zef walks at the front with the German orchestra. They are polite, correct. The bandleader, a tall, thin man with glasses, thanks Zef in broken Dutch.</p>
 
-          <p><span class="dialogue"><span class="speaker">Bandleader</span>"Dankesch\u00f6n. Wir... wissen dat het niet makkelijk ist."</span></p>
+          <p><span class="dialogue"><span class="speaker">Bandleader</span>"Dankesch\u00f6n. Wir... wissen, dass es nicht einfach ist."</span></p>
 
           <p>Zef nods. He knows. It is not easy. For anyone.</p>
 
@@ -972,13 +972,13 @@ const content = {
 
           <p>The days that follow are a blur of chaos, music, and improvisation.</p>
 
-          <p>Zef hustles. That is what he does. He hustles buses when the trains stop running. He hustles beer crates when supplies run out. He hustles a blacksmith to repair a tuba that did not survive the journey from Norway. He hustles a Spanish translator when an ensemble from Madrid arrives that does not understand a single word.</p>
+          <p>Zef hustles. That is what he does. He hustles beer crates when supplies run out. He hustles a blacksmith to repair a tuba that did not survive the journey from Denmark. He hustles extra sleeping spots when a Norwegian ensemble arrives with twice as many men as registered.</p>
 
           <p>And slowly, day by day, he sees something happening to Kerkrade.</p>
 
           <p>The city comes alive. Not a little, <em>completely.</em></p>
 
-          <p>On the Market Square, a Swedish ensemble rehearses beside an Italian one, and the cold Scandinavian sounds flow together with the warm Mediterranean tones in a way nobody expected. On Hopelstraat, English miners from the Frickley Band teach the children "It's a Long Way to Tipperary", and the children teach them a Dutch folk song in return.</p>
+          <p>On the Market Square, a Swedish ensemble rehearses beside an Italian one, and the cold Scandinavian sounds flow together with the warm Mediterranean tones in a way nobody expected. On Hopelstraat, English musicians from the Darlington Railway Band teach the children "It's a Long Way to Tipperary", and the children teach them a Dutch folk song in return.</p>
 
           <p>At the <em>Kirchroa Alaaf</em> exhibition on the Mucherveld, queues stretch two streets long. Two thousand people, three thousand. The organisation had expected fifty thousand visitors for the entire competition. They are already at a hundred thousand and it is only Wednesday.</p>
 
@@ -997,7 +997,7 @@ const content = {
 
           <p>The final day. The Market Square of Kerkrade is unrecognisable.</p>
 
-          <p>Where miners normally walk home with empty lunch boxes, there now stand grandstands. Makeshift, built from wood and iron that Zef "borrowed" from a construction site at the Domaniale. The stage is decorated with the flags of all thirteen participating countries, and the sun, which finally, <em>finally</em> breaks through the grey clouds, makes the brass of the instruments gleam like gold.</p>
+          <p>Where miners normally walk home with empty lunch boxes, there now stand grandstands. Makeshift, built from wood and iron that Zef "borrowed" from a construction site at the Domaniale. The stage is decorated with the flags of all seventeen participating countries, and the sun, which finally, <em>finally</em> breaks through the grey clouds, makes the brass of the instruments gleam like gold.</p>
 
           <p>Two hundred thousand visitors. That number will make the papers later. But right now, at this moment, it is simply a sea of people. A sea that breathes, talks, laughs, and waits.</p>
 
@@ -1067,7 +1067,7 @@ const content = {
 
           <p>He thinks of the station square. Of the trombone and the clarinet that found a melody together that was not in any sheet music.</p>
 
-          <p><span class="dialogue"><span class="speaker">Zef</span>"A competition, that can happen anywhere. In Brussels, in London, in Vienna. But a place where musicians from all over the world create something <em>new</em> together? Where a miners' band from Yorkshire stands next to a harmonie from Paris and together they sound like something no one has ever heard before? That can only happen here. Only in Kerkrade."</span></p>
+          <p><span class="dialogue"><span class="speaker">Zef</span>"A competition, that can happen anywhere. In Brussels, in London, in Vienna. But a place where musicians from all over the world create something <em>new</em> together? Where a harmonie from Newcastle stands next to a harmonie from Paris and together they sound like something no one has ever heard before? That can only happen here. Only in Kerkrade."</span></p>
 
           <p>Pie Slijpen, who has been silent until now, clears his throat.</p>
 
@@ -1093,11 +1093,11 @@ const content = {
 
           <p>The flags are gone. The grandstands dismantled. The wood returned to the construction site at the Domaniale. Zef brought it back personally, at night, because officially he had never "borrowed" it.</p>
 
-          <p>Kerkrade is grey again. The coal dust hangs in the air once more, the alarm clocks ring at quarter to five again, and on Hopelstraat the guest beds have been put away.</p>
+          <p>Kerkrade is grey again. The coal dust hangs in the air once more, the alarm clocks ring at quarter to five again, and on Hopelstraat the extra beds have been put away.</p>
 
           <p>But something has changed.</p>
 
-          <p>Mrs Cremers has placed a photograph on her windowsill of the Norwegian tuba player who stayed with her. "A nice young man," she tells everyone who will listen. "Ate everything." At the Schmitz home, a framed letter from Tom Atkinson hangs on the wall, in an English they do not entirely understand but cherish nonetheless.</p>
+          <p>Mrs Cremers has placed a photograph on her windowsill of the Norwegian tuba player who stayed with her. "A nice young man," she tells everyone who will listen. "Ate everything." At the Schmitz home, a framed letter from F. Tompkins hangs on the wall, in an English they do not entirely understand but cherish nonetheless.</p>
 
           <p>And Zef? Zef sits on the bench by the Market Square, in the same spot where three weeks ago two hundred thousand people stood. It is quiet now. Only a blackbird sings, somewhere on a rooftop.</p>
 
@@ -1107,7 +1107,7 @@ const content = {
 
           <p><em>This was only the beginning.</em></p>
 
-          <p>In four years, they will do it again. And then it will be bigger. And then the whole country will be part of it. And then the whole world.</p>
+          <p>In 1954, they will do it again. And then it will be bigger. And then the whole country will be part of it. And then the whole world.</p>
         `,
         continueText: null,
         next: null,
